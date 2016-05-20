@@ -1,0 +1,31 @@
+on run {}
+	if application "Spotify" is running then
+		
+		tell application "Spotify"
+			set isPlaying to player state as string
+			if isPlaying is "playing" then
+				set spotifyName to name of current track as string
+				set spotifyArtist to artist of current track as string
+				set spotifyID to id of current track as string
+			end if
+		end tell
+		
+		if isPlaying is "playing" then
+			
+			if application "Evernote" is not running then
+				set EvernoteWasRunning to false as boolean
+			else
+				set EvernoteWasRunning to true as boolean
+			end if
+			
+			tell application "Evernote" to create note with text spotifyArtist title spotifyName notebook "Songs"
+			
+			if EvernoteWasRunning is false then
+				tell application "Evernote" to quit
+			end if
+		end if
+	else
+		display notification "spotify not playing"
+	end if
+	
+end run
