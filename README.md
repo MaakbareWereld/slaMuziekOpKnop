@@ -3,7 +3,7 @@ Arduino Leonardo and AppleScript code to automate saving a song to "my Music" in
 
 The basic idea is to have a big button next to your workstation/laptop that you can bang on when you hear a great song in spotify that you want to save to "my music", but you do not want to leave the program that you are currently working in. This script uses both Spotify and Evernote, and an IFTTT recipe, so you should have account with all three before proceeding.
 
-I made this device (service?) for my monthly column in dutch newspaper "The Volkskrant", which can be read here: http://www.volkskrant.nl/wetenschap/zo-vergeet-je-nooit-meer-iets-tussentijds-op-te-slaan~a4230408/
+I made this device (service?) for my monthly column in dutch newspaper "The Volkskrant", which can be read here: http://www.volkskrant.nl/wetenschap/sla-met-een-druk-op-de-knop-je-favoriete-muziek-op~a4304535/
 
 ## step 1: Arduino
 Make a physical "big button". I used an old nightlight, but anything will do, as long as it will briefly connect two wires that when pressing the button. Connect the two wires to pins 2 and GND on an Arduino Leonardo. (Will not work on an Arduino UNO because we use the "connect as keyboard" feature of the Leonardo). In my version, I hid the Arduino underneath the button in a nice carton box. 
